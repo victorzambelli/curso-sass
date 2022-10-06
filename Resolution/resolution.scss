@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import "partials/media_queries.scss";
+@import "partials/functions.scss";
+@import "partials/mixins.scss";
+@import "partials/variables.scss";
+
+* {
+    margin: $zero;
+    padding: $zero;
+    @include borderRadius(border-box);
+}
+
+html {
+    font-size: calc-rem(16rem);
+}
+
+ul {
+  padding: $zero;
+  margin: $zero;
+}
+
+img {
+  border: $zero;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #fafafa;
+}
+
+main {
+  width: 90%;
+  max-width: calc-rem(935rem);
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  margin: 30px 0;
+  flex-flow: column;
+
+  .avatar {
+    @include borderRadius($fiftyRadius);
+    margin: 0 auto;
+  }
+
+  .desc {
+    text-align: center;
+  }
+
+  h1, h2 {
+    display: inline-block;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .links {
+    list-style: none;
+    margin: 10px 0;
+  }
+
+  .links li {
+    list-style: none;
+    margin: 0 20px 0 0;
+    display: inline-block;
+  }
+}
+
+.btn-newstyle {
+  padding: 8px 10px;
+  border-width: 3px;
+  border-style: dashed;
+  @include borderRadius(10px)
+}
+
+%btnStyle {
+  margin: 0 20px;
+  padding: 6px 14px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $bluecolor;
+  color: $bluecolor;
+}
+
+.btn-follow {
+  @extend %btnStyle;
+  @include borderRadius($fourRadiuspx);
+  @extend .btn-newstyle;
+
+  &:hover {
+      background: $bluecolor;
+      color: #fff;
+  }
+}
+
+.photos {
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+
+  li {
+    width: $max;
+    margin: 20px 0;
+    position: relative;
+  }
+
+  li img {
+    width: $max;
+  }
+  
+  li .img-hover {
+    opacity: $zero;
+    position: absolute;
+    top: $zero;
+    left: $zero;
+    width: $max;
+    height: $max;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s linear;
+  }
+
+  li:hover .img-hover {
+    opacity: 1;
+  }
+}
