@@ -4,8 +4,6 @@ Sass é uma linguagem que estende e adiciona diversos recursos ao CSS, como cria
 
 Neste curso serão abordados conceitos e funcionalidades do Sass utilizando <a href="https://github.com/sass/node-sass" target="_blank">node-sass</a> para compilação.
 
-:computer: Assista as aulas [aqui](https://goo.gl/LNM59Z)
-
 ## Apostila :books:
 
 - <a href="Apostila/about.md" target="_blank">Introdução</a>
